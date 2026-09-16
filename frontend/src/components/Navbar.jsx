@@ -1,32 +1,44 @@
+import {
+  Search,
+  Bell,
+  ChevronDown,
+} from "lucide-react";
+
 function Navbar() {
   return (
     <header className="navbar">
 
-      <div className="search-box">
-        <span>⌕</span>
+      <div className="navbar-search">
+        <Search size={18} />
+
         <input
           type="text"
           placeholder="Search targets, scans or vulnerabilities..."
         />
+
         <kbd>Ctrl K</kbd>
       </div>
 
       <div className="navbar-right">
 
-        <button className="notification">
-          ♧
-          <span></span>
+        <button className="notification-btn">
+          <Bell size={20} />
+          <span className="notification-dot"></span>
         </button>
 
         <div className="profile">
-          <div className="avatar">VP</div>
 
-          <div>
+          <div className="avatar">
+            VP
+          </div>
+
+          <div className="profile-info">
             <strong>Vedant Patil</strong>
             <small>Security Enthusiast</small>
           </div>
 
-          <span>⌄</span>
+          <ChevronDown size={17} />
+
         </div>
 
       </div>
